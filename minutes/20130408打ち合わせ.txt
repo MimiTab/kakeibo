@@ -1,0 +1,26 @@
+■日時
+  2013/04/08(月) 19:30-22:30 @ 鳥どり
+
+■参加者
+  flyingatsu, mamiyaura, toshiros, thiroyoshi
+
+■議事内容
+  ◎チーム名、リーダー
+    チーム名:MimiTab
+　　リーダー:thiroyoshi
+
+　◎作成物
+　　ずぼらな人のための家計簿アプリ(Android)
+
+　◎開発環境について
+　　Java、github、etc
+　　次回要検討
+
+　◎タスク
+　　・Gmailアカウント取得:flyingatsu
+　　・githubアカウント取得:flyingatsu
+
+　◎次回予定
+　　4/12(金)時間未定@flyingatsu宅
+　　要件洗い出し、タスク分配
+
