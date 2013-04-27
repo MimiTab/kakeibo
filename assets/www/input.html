@@ -1,14 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=320, user-scalable=no" />
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<title>NFC Reader Demo</title>
-<link rel="stylesheet" href="css/nfc-test.css" type="text/css" media="screen" title="no title" charset="utf-8">
-</head>
+		<meta name="viewport" content="width=320, user-scalable=no" />
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<link rel="stylesheet" href="css/nfc-test.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
-<<<<<<< HEAD
-	<head>
 		<title></title> 
  		<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css"/>
 		<script type="text/javascript" charset="utf-8" src="js/jquery-2.0.0.min.js"></script>
@@ -41,7 +37,7 @@
 		    function gotFile(file){
 		        /* readDataUrl(file); */
 		        readAsText(file);
-		        /* readAsArrayBuffer(file); */
+		        /* showAlert(file); */
 		    }
 	
 		    /* function readDataUrl(file) {
@@ -62,35 +58,34 @@
 		        reader.readAsText(file);
 		    }
 		    
-		    /* function readAsArrayBuffer(file) {
+		    /* function showAlert(file) {
 		        var reader = new FileReader();
 		        reader.onloadend = function(evt) {
 		            console.log("read success");
 		            console.log(new Uint8Array(evt.target.result));
 		        };
-		        reader.readAsArrayBuffer(file);
+		        reader.showAlert(file);
 		    }; */
-	
+		    
+		    function showAlert() {
+       			 navigator.notification.alert(
+            		'You are the winner!',  // message
+            		'Game Over',            // title
+            		'Done'                  // buttonName
+        		);
+    		}
+		    
+		    
 		    function fail(evt) {
 		        console.log(evt.target.error.code);
 		    }
 		</script> -->
 		<!-- <script src="plugins/plugin-loader.js"></script> -->
 		
-
-		
 	</head>
+
 	<body>
-		<header>入力画面</header>
-		<input type="button" value="読み出し" id="read" onClick="consoleOut()">
-		<input type="text" id="result" value="">
-		
-
-
-
-=======
-<body>
-    <header>入力画面</header>
+		<img src="pic/zuboraibo.jpg" width=100%>
 		
 		<h3>Suicaタッチで交通費を入力しよう！</h3>
 		
@@ -102,33 +97,32 @@
 		
 		<div class="breakfast">
 			<h4>朝ご飯</h4>
-			<input type="button" value="300円" onClick="readAsArrayBuffer()">
-			<input type="button" value="400円" onClick="readAsArrayBuffer()">
-			<input type="button" value="500円" onClick="readAsArrayBuffer()">
+			<input type="button" value="300円" onClick="showAlert()">
+			<input type="button" value="400円" onClick="showAlert()">
+			<input type="button" value="500円" onClick="showAlert()">
 		</div>
 		
 		<div class="lunch">
 			<h4>昼ご飯</h4>
-			<input type="button" value="700円" onClick="readAsArrayBuffer()">
-			<input type="button" value="800円" onClick="readAsArrayBuffer()">
-			<input type="button" value="900円" onClick="readAsArrayBuffer()">
+			<input type="button" value="700円" onClick="showAlert()">
+			<input type="button" value="800円" onClick="showAlert()">
+			<input type="button" value="900円" onClick="showAlert()">
 		</div>
 		
 		<div class="dinner">
 			<h4>晩ご飯</h4>
-			<input type="button" value="700円" onClick="readAsArrayBuffer()">
-			<input type="button" value="800円" onClick="readAsArrayBuffer()">
-			<input type="button" value="900円" onClick="readAsArrayBuffer()">
+			<input type="button" value="700円" onClick="showAlert()">
+			<input type="button" value="800円" onClick="showAlert()">
+			<input type="button" value="900円" onClick="showAlert()">
 		</div>
 		
 		<div class="party">
 			<h4>飲み会</h4>
-			<input type="button" value="3500円" onClick="readAsArrayBuffer()">
-			<input type="button" value="4000円" onClick="readAsArrayBuffer()">
-			<input type="button" value="4500円" onClick="readAsArrayBuffer()">
+			<input type="button" value="3500円" onClick="showAlert()">
+			<input type="button" value="4000円" onClick="showAlert()">
+			<input type="button" value="4500円" onClick="showAlert()">
 		</div>
 				
-		
 		
 		<!-- <section id="contents">
 			<div class="box1">
@@ -143,7 +137,7 @@
 				<a data-role="button">生まれ年を計算</a>
 			</div>
 		</section> -->
->>>>>>> はりぼて１
+
 		<div data-role="footer">
 			2013 MimiTab
 		</div>
