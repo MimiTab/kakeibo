@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css"/>
+		<script type="text/javascript" charset="utf-8" src="js/jquery-2.0.0.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.3.1.min.js"></script>
+
+		<script type="text/javascript" charset="utf-8" src="js/cordova-2.6.0.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/phonegap-nfc.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			// Wait for Cordova to load
+		    //
+		    function onLoad() {
+		        document.addEventListener("deviceready", onDeviceReady, false);
+		    }
+	
+		    // Cordova is ready
+		    //
+		    function onDeviceReady() {
+		        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+		    }
+	
+		    function gotFS(fileSystem) {
+		        fileSystem.root.getFile("conf.txt", null, gotFileEntry, fail);
+		    }
+	
+		    function gotFileEntry(fileEntry) {
+		        fileEntry.file(gotFile, fail);
+		    }
+	
+		    function gotFile(file){
+		        readDataUrl(file);
+		        readAsText(file);
+		        readAsArrayBuffer(file);
+		    }
+	
+		    function readDataUrl(file) {
+		        var reader = new FileReader();
+		        reader.onloadend = function(evt) {
+		            console.log("Read as data URL");
+		            console.log(evt.target.result);
+		        };
+		        reader.readAsDataURL(file);
+		    }
+	
+		    function readAsText(file) {
+		        var reader = new FileReader();
+		        reader.onloadend = function(evt) {
+		            console.log("Read as text");
+		            console.log(evt.target.result);
+		        };
+		        reader.readAsText(file);
+		    }
+		    
+		    function readAsArrayBuffer(file) {
+		        var reader = new FileReader();
+		        reader.onloadend = function(evt) {
+		            console.log("read success");
+		            console.log(new Uint8Array(evt.target.result));
+		        };
+		        reader.readAsArrayBuffer(file);
+		    };
+	
+		    function fail(evt) {
+		        console.log(evt.target.error.code);
+		    }
+		</script>
+		<script src="plugins/plugin-loader.js"></script>
+		
+		
+	</head>
+	<body>
+		<header>入力画面</header>
+		
+		<!-- <label for="select-choice-0" class="select">用途:</label>
+		<select name="select-choice-0" id="select-choice-1">
+			<option value="a">食費</option>
+			<option value="b">交通費</option>
+		</select> -->
+		
+		<input type="button" value="読み出し" onClick="readAsArrayBuffer()">
+		<input type="text" id="result" value="">
+		
+		
+		
+		<!-- <section id="contents">
+			<div class="box1">
+				あなたのお名前は？
+				<input type="text" id="myname" data-role="input-text" style="width: 40%">
+			</div>
+			<div class="box2">
+				年齢は？
+				<input type="text" id="myage" data-role="input-text" style="width: 20%">
+			</div>
+			<div class="input-box">
+				<a data-role="button">生まれ年を計算</a>
+			</div>
+		</section> -->
+		<div data-role="footer">
+			2013 MimiTab
+		</div>
+	</body>
+
+</html>

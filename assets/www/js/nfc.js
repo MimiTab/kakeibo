@@ -58,7 +58,7 @@ var app = {
         tagContents.innerHTML = app.nonNdefTagTemplate(tag);    
         navigator.notification.vibrate(100);     
         
-        alert("こちらはPro版限定機能です。Pro版をご購入ください。");
+        alert("交通費入力はPro版限定機能です。Pro版をご購入ください。");
            
     },
     onNdef: function (nfcEvent) {
@@ -79,7 +79,7 @@ var app = {
 
         navigator.notification.vibrate(100);        
         
-        alert("こちらはPro版限定機能です。Pro版をご購入ください。");
+        alert("交通費入力はPro版限定機能です。Pro版をご購入ください。");
     },
     clearScreen: function () {
         
