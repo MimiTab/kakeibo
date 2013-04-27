@@ -8,15 +8,29 @@
 		<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.3.1.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="js/cordova-2.6.0.js"></script>
 		<!-- <script src="plugins/plugin-loader.js"></script> -->
+		 <script src="js/date.js" charseet="utf-8"></script>
 	</head>
 	<body>
 		<header>メイン画面</header>
+
+		<h2>
+
+			<script type="text/javascript">
+				var d = new Date();
+				var f = 'yyyy年MM月dd日';
+				var str = comDateFormat(d, f); // 日付から文字列にする
+				document.write('現在日時: ' + str + '<br />');
+			</script>
+
+			</h2>
+
+
 		<a href="balance.html" data-role="button">残高</a>
 		<br>
 		<a href="input.html" data-role="button">入力</a>
 		<br>
 		<a href="config.html" data-role="button">設定</a>
-		
+
 		<div data-role="footer">
 			2013 MimiTab
 		</div>
