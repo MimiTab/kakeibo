@@ -56,7 +56,10 @@ var app = {
         app.clearScreen();
 
         tagContents.innerHTML = app.nonNdefTagTemplate(tag);    
-        navigator.notification.vibrate(100);        
+        navigator.notification.vibrate(100);     
+        
+        alert("こちらはPro版限定機能です。Pro版をご購入ください。");
+           
     },
     onNdef: function (nfcEvent) {
         
@@ -75,6 +78,8 @@ var app = {
         tagContents.innerHTML = app.tagTemplate(tag);
 
         navigator.notification.vibrate(100);        
+        
+        alert("こちらはPro版限定機能です。Pro版をご購入ください。");
     },
     clearScreen: function () {
         
