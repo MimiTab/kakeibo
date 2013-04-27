@@ -92,14 +92,43 @@
 <body>
     <header>入力画面</header>
 		
+		<h3>Suicaタッチで交通費を入力しよう！</h3>
+		
 		<!-- <label for="select-choice-0" class="select">用途:</label>
 		<select name="select-choice-0" id="select-choice-1">
 			<option value="a">食費</option>
 			<option value="b">交通費</option>
 		</select> -->
 		
-		<input type="button" value="読み出し" onClick="readAsArrayBuffer()">
-		<input type="text" id="result" value="">
+		<div class="breakfast">
+			<h4>朝ご飯</h4>
+			<input type="button" value="300円" onClick="readAsArrayBuffer()">
+			<input type="button" value="400円" onClick="readAsArrayBuffer()">
+			<input type="button" value="500円" onClick="readAsArrayBuffer()">
+		</div>
+		
+		<div class="lunch">
+			<h4>昼ご飯</h4>
+			<input type="button" value="700円" onClick="readAsArrayBuffer()">
+			<input type="button" value="800円" onClick="readAsArrayBuffer()">
+			<input type="button" value="900円" onClick="readAsArrayBuffer()">
+		</div>
+		
+		<div class="dinner">
+			<h4>晩ご飯</h4>
+			<input type="button" value="700円" onClick="readAsArrayBuffer()">
+			<input type="button" value="800円" onClick="readAsArrayBuffer()">
+			<input type="button" value="900円" onClick="readAsArrayBuffer()">
+		</div>
+		
+		<div class="party">
+			<h4>飲み会</h4>
+			<input type="button" value="3500円" onClick="readAsArrayBuffer()">
+			<input type="button" value="4000円" onClick="readAsArrayBuffer()">
+			<input type="button" value="4500円" onClick="readAsArrayBuffer()">
+		</div>
+				
+		
 		
 		<!-- <section id="contents">
 			<div class="box1">
